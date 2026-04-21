@@ -1,0 +1,424 @@
+.overviewPage {
+    padding: 32px 24px;
+}
+
+/*LEFT - UTILIZATION */
+
+.overviewTitle {
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 700;
+    color: #213547;
+
+}
+
+/* Layout */
+.overviewTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Card base */
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+    border-radius: 10px;
+    padding: 24px;
+    
+}
+
+/* Labels */
+.cardLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9aa3ad;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+}
+
+/* Labels */
+.cardLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9aa3ad;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+}
+
+
+/////////////////////////////
+
+/*RIGHT - ORDER SUMMARY */
+.utilizationCard {
+    min-height:320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.utilCenter {
+    flex:1;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+.utilCenter h2 {
+  margin: 0;
+  font-size: 56px;
+  line-height: 1;
+  color: #4b5563;
+}
+
+.utilRange {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: 20px;
+  color: #6b7280;
+}
+
+.utilCenter span {
+  margin-top: 6px;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.summaryCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.summaryRow:last-child {
+  border-bottom: none;
+}
+
+.summaryText p {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #3f4a59;
+}
+
+.summaryText span {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #a0a8b3;
+}
+
+.summaryMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.summaryMeta h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #3f4a59;
+}
+
+.viewLink {
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  color: #4da3ff;
+  cursor: pointer;
+}
+
+/////////////////////////////
+
+/*OVERVIEW MIDDLE*/
+.overviewMiddle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+/*LEFT CARD*/
+
+.billingTable {
+  margin-top: 24px;
+}
+
+.billingTableHead,
+.billingRow {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr auto;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.billingTableHead {
+  margin-bottom: 14px;
+}
+
+.billingTableHead span {
+  font-size: 15px;
+  color: #8e98a7;
+}
+
+.billingRow {
+  padding: 12px 0;
+}
+
+.invoiceLink {
+  color: #5aa8f7;
+}
+
+.detailsLink {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  color: #5aa8f7;
+  cursor: pointer;
+  justify-self: end;
+}
+
+/*RIGHT CARD*/
+
+.shipmentCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.shipmentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.shipmentControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.shipmentPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5aa8f7;
+  background: #eaf4ff;
+}
+
+.shipmentNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shipmentNav span {
+  font-size: 15px;
+  color: #4a5565;
+}
+
+.shipmentArrow {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1;
+  color: #7f8996;
+  cursor: pointer;
+}
+
+.shipmentLineWrap {
+  margin-top: 24px;
+}
+
+.shipmentLine {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #4da3ff 0%, #4da3ff 58%, #dfe5eb 58%, #dfe5eb 100%);
+}
+
+.shipmentLocations {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.shipmentLocations h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #3f4a59;
+}
+
+.shipmentLocations span {
+  font-size: 13px;
+  color: #97a1ad;
+}
+
+.shipmentRightLocation {
+  text-align: right;
+}
+
+.shipmentDetailsTop {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.shipmentDetailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+  margin-top: 18px;
+}
+
+.shipmentDetailsGrid h5 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #3f4a59;
+}
+
+.shipmentDetailsGrid p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #a0a8b3;
+}
+
+/*OVERVIEW BOTTOM*/
+
+.overviewBottom {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.repaymentsCard {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.repaymentsCard h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9aa3ad;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+
+.repaymentsTable {
+  width: 100%;
+}
+
+.repaymentsHead,
+.repaymentsRow {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1.2fr 1.1fr 1.1fr 0.8fr;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.repaymentsHead {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef1f4;
+  margin-bottom: 6px;
+}
+
+.repaymentsHead span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #9aa3ad;
+}
+
+.repaymentsRow {
+  padding: 16px 0;
+  border-bottom: 1px solid #f5f6f8;
+}
+
+.repaymentsRow:last-child {
+  border-bottom: none;
+}
+
+.repaymentsRow span {
+  font-size: 14px; 
+}
+
+.repaymentsRow a {
+  font-size: 14px;
+  color: #4da3ff;
+  text-decoration: none;
+  justify-self: end;
+}
+
+.repaymentStatusCell {
+  display: flex;
+  align-items: center;
+}
+
+.repaymentBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Red */
+.isOverdue {
+  background: #ffe7e7;
+  color: #e05656;
+}
+
+/* Blue */
+.isProgress {
+  background: #E6F0FF;
+  color: #1D4ED8;
+}
+
+/* Green */
+.isCompleted {
+  background: #E6F4EA;
+  color: #1E7A3B;
+}
+
+/* Gray */
+.isReview {
+  background: #fff4e7;
+  color: #c2410c;
+}

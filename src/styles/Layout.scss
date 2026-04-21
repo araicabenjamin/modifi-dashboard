@@ -1,0 +1,198 @@
+/* layout */
+.dashboardLayout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageContainer {
+  padding: 32px;
+}
+
+// --------------------
+/* sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  border-right: 1px solid #d9e1ea;
+}
+
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0;
+}
+
+// --------------------
+/* nav item - base */
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  color: #b2b3b5;
+  text-decoration: none;
+  position: relative;
+}
+
+.navItem svg {
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.navLabel {
+  color: inherit;
+  font-weight: 600;
+}
+
+/* nav item - states */
+
+.navItem.active,
+.navItem:hover {
+  background-color: #f4f4f4;
+  color: #4a4a4a;
+}
+
+.navItem.active svg,
+.navItem:hover svg {
+  color: #56aeea;
+}
+
+.navItem.active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #56aeea;
+}
+
+/* special item */
+
+.financeTradeItem {
+  margin-top: 12px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.financeTradeItem .navLabel,
+.financeTradeItem svg {
+  color: #56aeea;
+}
+
+.financeTradeItem::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  height: 1px;
+  background-color: #d9e1ea;
+}
+
+/* badge */
+
+.newBadge {
+  margin-left: 12px;
+  padding: 1px 6px;
+  border-radius: 2px;
+  background-color: #8dc63f;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  transform: skew(-12deg);
+}
+
+.servicesArrow {
+  margin-left: 12px;
+  width: 14px;
+  height: 14px;
+  color: #56aeea;
+}
+
+/* top bar */
+.topBar {
+  height: 64px;
+  background-color:#ffffff;
+  border-bottom: 1px solid #d9e1ea;
+  display: flex;
+
+  align-items: center;
+}
+
+.topBarLogo {
+  height: 28px;
+  display: block;
+}
+
+.topBar {
+  height: 64px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d9e1ea;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.topBarLeft {
+  display: flex;
+  align-items: center;
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: 120px;
+}
+
+.topBarCompany {
+  font-size: 15px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.topBarIcon {
+  color: #6b7280;
+}
+
+/* dashboard */
+
+.dashboardLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.dashboardBody {
+  display: flex;
+  flex: 1;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* button */
+
+.financeTradeButton {
+ background-color: #8dc63f;
+ color: white;
+ font-weight: 800;
+ letter-spacing: -0.2px;
+ border-radius: 0px;
+}
