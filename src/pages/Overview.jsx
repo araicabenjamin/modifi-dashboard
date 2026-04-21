@@ -1,5 +1,5 @@
 import { repayments } from "../data/repayments.js";
-import { getOverviewMetrics } from "../utils/tradeMetrics";
+import { getOverviewMetrics } from "../utils/trademetrics";
 import { ChevronRight } from "lucide-react";
 import "../styles/overview.scss";
 
