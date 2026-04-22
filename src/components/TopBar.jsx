@@ -4,7 +4,7 @@ function TopBar() {
     return (
       <header className="topBar">
       <div className="topBarLeft">
-        <img src="/src/assets/images/MODIFI_Logo.png" alt="MODIFI" className="topBarLogo" />
+        <img src="/assets/images/modifi_logo.png" alt="MODIFI" className="topBarLogo" />
         </div>
 
       <div className="topBarRight">
