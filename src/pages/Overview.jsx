@@ -1,7 +1,7 @@
 import { repayments } from "../data/repayments.js";
 import { getOverviewMetrics } from "../utils/trademetrics";
 import { ChevronRight } from "lucide-react";
-import "../styles/overview.scss";
+import "../styles/Overview.scss";
 
 export default function OverviewPage() {
   const metrics = getOverviewMetrics(repayments);
