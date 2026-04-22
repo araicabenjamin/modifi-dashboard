@@ -1,10 +1,11 @@
 import { FiBell } from "react-icons/fi";
+import logo from "../assets/images/modifi_logo.png";
 
 function TopBar() {
     return (
       <header className="topBar">
       <div className="topBarLeft">
-        <img src="/assets/images/modifi_logo.png" alt="MODIFI" className="topBarLogo" />
+        <img src={logo} alt="MODIFI" className="topBarLogo" />
         </div>
 
       <div className="topBarRight">
