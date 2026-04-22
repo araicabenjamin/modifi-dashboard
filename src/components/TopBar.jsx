@@ -1,20 +1,19 @@
 import { FiBell } from "react-icons/fi";
-import logo from "../assets/images/modifi_logo.png";
 
 function TopBar() {
-    return (
-      <header className="topBar">
+  return (
+    <header className="topBar">
       <div className="topBarLeft">
-        <img src={logo} alt="MODIFI" className="topBarLogo" />
-        </div>
+        <img src="/modifi_logo.png" alt="MODIFI" className="topBarLogo" />
+      </div>
 
       <div className="topBarRight">
         <button className="financeTradeButton">FINANCE TRADE</button>
         <FiBell className="topBarIcon" />
         <div className="topBarCompany">MODIFI</div>
       </div>
-      </header>
-    );
+    </header>
+  );
 }
 
 export default TopBar;
