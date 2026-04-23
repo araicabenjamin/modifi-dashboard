@@ -422,3 +422,66 @@
   background: #fff4e7;
   color: #c2410c;
 }
+
+
+/******* ARC ********/
+
+.utilLabel {
+  font-size: 20px;
+  color: #51565C; 
+  font-weight: 400;
+  display: block;
+}
+
+/* UTILIZATION CARD */
+
+.utilizationCard {
+  display: flex;
+  flex-direction: column;
+  overflow: visible !important;
+}
+
+/* ARC CONTAINER */
+.utilArcContainer {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  overflow: visible; /* 🔥 critical */
+}
+
+/* SVG SIZE */
+.progressArc {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  display: block;
+}
+
+/* TEXT POSITION */
+.utilArcContent {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* % NUMBER */
+.utilArcContent h2 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0;
+  color: #2f3a45;
+}
+
+/* RANGE */
+.utilRange {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: -20px;
+  color: #6b7280;
+  font-size: 14px;
+}

@@ -1,6 +1,7 @@
 import { repayments } from "../data/repayments.js";
 import { getOverviewMetrics } from "../utils/trademetrics";
 import { ChevronRight } from "lucide-react";
+import ProgressArc from "../components/ProgressArc";
 import "../styles/Overview.scss";
 
 export default function OverviewPage() {
@@ -22,9 +23,13 @@ export default function OverviewPage() {
         <div className="card utilizationCard">
           <p className="cardLabel">LIMIT UTILIZATION</p>
 
-          <div className="utilCenter">
-            <h2>{metrics.utilizationPercent}%</h2>
-            <span>used</span>
+          <div className="utilArcContainer">
+            <ProgressArc value={metrics.utilizationPercent} />
+
+            <div className="utilArcContent">
+              <h2>{metrics.utilizationPercent}%</h2>
+              <span className="utilLabel">used</span>
+            </div>
           </div>
 
           <div className="utilRange">
