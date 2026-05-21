@@ -16,7 +16,7 @@ function ProgressArc({ value = 48 }) {
       <path
         d="M10 90 A 80 80 0 0 1 190 90"
         fill="none"
-        stroke="#D1D5DB"
+        stroke="#E6E6E6"
         strokeWidth="12"
         strokeLinecap="butt"
       />

@@ -1,6 +1,7 @@
 import { repayments } from "../data/repayments.js";
 import { getOverviewMetrics } from "../utils/trademetrics";
 import { ChevronRight } from "lucide-react";
+import { ClockCheck } from "lucide-react";
 import ProgressArc from "../components/ProgressArc";
 import "../styles/Overview.scss";
 
@@ -18,7 +19,15 @@ export default function OverviewPage() {
   return (
     <div className="overviewPage">
       {/* TOP ROW */}
+
+      <div className="buyerSellerTabs">
+        <button className="buyerSellerTab activeTab">Buyer</button>
+
+        <button className="buyerSellerTab">Seller</button>
+      </div>
+
       <div className="overviewTop">
+
         {/* LEFT — UTILIZATION */}
         <div className="card utilizationCard">
           <p className="cardLabel">LIMIT UTILIZATION</p>
@@ -26,8 +35,8 @@ export default function OverviewPage() {
           <div className="utilArcContainer">
             <ProgressArc value={metrics.utilizationPercent} />
 
-            <div className="utilArcContent">
-              <h2>{metrics.utilizationPercent}%</h2>
+            <div className="utilArcContent ">
+              <h2 className="stat-heading">{metrics.utilizationPercent}%</h2>
               <span className="utilLabel">used</span>
             </div>
           </div>
@@ -73,6 +82,7 @@ export default function OverviewPage() {
           <div className="summaryRow">
             <div className="summaryText">
               <p>Trade in Progress</p>
+
               <span>Total number of trades in progress</span>
             </div>
 
@@ -158,7 +168,12 @@ export default function OverviewPage() {
             <p className="cardLabel">SHIPMENT TRACKER</p>
 
             <div className="shipmentControls">
-              <span className="shipmentPill">Progress</span>
+              
+              <span className="shipmentPill">
+                <ClockCheck size={16} strokeWidth={2} color="#53A2D9" />
+                Progress
+              </span>
+
               <div className="shipmentNav">
                 <button type="button" className="shipmentArrow">
                   ‹
@@ -171,8 +186,23 @@ export default function OverviewPage() {
             </div>
           </div>
 
+          {/* SHIP IMAGE */}
           <div className="shipmentLineWrap">
+            <div className="shipmentStartBlock"></div>
+
             <div className="shipmentLine"></div>
+
+            <div className="shipmentDottedLine"></div>
+
+            <div className="shipmentEndBlock"></div>
+
+            <div className="shipImgContainer">
+              <img
+                src="src/assets/images/ship.svg"
+                alt="Shipment progress"
+                className="shipmentTrackerImage"
+              />
+            </div>
           </div>
 
           <div className="shipmentLocations">
@@ -201,17 +231,17 @@ export default function OverviewPage() {
 
             <div>
               <h5>Container</h5>
-              <p>AlphaNumericalnumber</p>
+              <p>MSKU 4583921</p>
             </div>
 
             <div>
               <h5>City Name</h5>
-              <p>Dateoftheshipmentdeparture</p>
+              <p>New York, USA</p>
             </div>
 
             <div>
               <h5>Country</h5>
-              <p>Dateoftheshipmentdeparture</p>
+              <p>United States</p>
             </div>
           </div>
         </div>

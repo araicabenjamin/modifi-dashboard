@@ -10,7 +10,6 @@ function TopBar() {
       <div className="topBarRight">
         <button className="financeTradeButton">FINANCE TRADE</button>
         <FiBell className="topBarIcon" />
-        <div className="topBarCompany">MODIFI</div>
       </div>
     </header>
   );
