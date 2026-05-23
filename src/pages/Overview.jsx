@@ -5,6 +5,7 @@ import { getOverviewMetrics } from "../utils/trademetrics";
 import { ChevronRight } from "lucide-react";
 import { ClockCheck } from "lucide-react";
 import ProgressArc from "../components/ProgressArc";
+import shipImage from "../assets/images/ship.svg";
 
 import { repayments } from "../data/repayments.js";
 
@@ -256,7 +257,7 @@ export default function OverviewPage() {
 
             <div className="shipImgContainer">
               <img
-                src="src/assets/images/ship.svg"
+                src={shipImage}
                 alt="Shipment progress"
                 className="shipmentTrackerImage"
               />
