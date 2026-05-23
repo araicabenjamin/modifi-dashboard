@@ -1,32 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 :root {
-
   /* TEXT */
-  --text-primary: #51565C;
-  --text-secondary: #B2B3B5;
-  --text-muted: #B6BEC8;
+  --text-primary: #51565c;
+  --text-secondary: #b2b3b5;
+  --text-muted: #b6bec8;
 
   /* BRAND */
-  --brand-green: #7ABD2A;
-  --brand-blue: #53A2D9;
+  --brand-green: #7abd2a;
+  --brand-blue: #53a2d9;
 
   /* SURFACES */
-  --surface-primary: #FFFFFF;
-  --surface-secondary: #F5F7FA;
+  --surface-primary: #ffffff;
+  --surface-secondary: #f5f7fa;
 
   /* BORDERS */
-  --border-light: #E6EAF0;
+  --border-light: #e6eaf0;
 
   /* STATUS */
-  --success: #1E7A3B;
-  --warning: #C2410C;
-  --danger: #E05656;
+  --success: #1e7a3b;
+  --warning: #c2410c;
+  --danger: #e05656;
 
   /* SHADOWS */
   --shadow-card:
-    0 4px 10px rgba(15, 23, 42, 0.04),
-    0 12px 24px rgba(15, 23, 42, 0.06);
+    0 4px 10px rgba(15, 23, 42, 0.04), 0 12px 24px rgba(15, 23, 42, 0.06);
 
   /* FONT WEIGHTS */
   --fw-regular: 400;
@@ -34,7 +32,6 @@
   --fw-semibold: 600;
   --fw-bold: 700;
 }
-
 
 /* TYPOGRAPHY SYSTEM */
 
@@ -53,6 +50,22 @@
   color: var(--text-secondary);
 }
 
+.table-cell {
+  font-size: 14px;
+  font-weight: var(--fw-regular);
+  color: var(--text-primary);
+}
+
+.table-link {
+  font-size: 14px;
+  color: var(--brand-blue);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
 .metric-title {
   font-size: 18px;
   font-weight: var(--fw-semibold);
@@ -65,12 +78,11 @@
   color: var(--text-secondary);
 }
 
-
 /* GLOBALS */
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html,

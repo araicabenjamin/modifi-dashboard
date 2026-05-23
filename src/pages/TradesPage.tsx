@@ -9,7 +9,7 @@ import "../styles/TradesPage.scss";
 
 export default function TradesPage() {
 
-  // -----------------------------
+  // -----------------------------  
   // STATE
   // -----------------------------
 

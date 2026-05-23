@@ -1,13 +1,39 @@
-import { repayments } from "../data/repayments.js";
+import { useState, useEffect } from "react";
+import { supabase } from "../lib/supabase";
+
 import { getOverviewMetrics } from "../utils/trademetrics";
 import { ChevronRight } from "lucide-react";
 import { ClockCheck } from "lucide-react";
 import ProgressArc from "../components/ProgressArc";
+
+import { repayments } from "../data/repayments.js";
+
 import "../styles/Overview.scss";
 
 export default function OverviewPage() {
+  const [repayments, setRepayments] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const metrics = getOverviewMetrics(repayments);
 
+  // Fetch repayments from Supabase on component mount
+
+  useEffect(() => {
+    async function fetchRepayments() {
+      const { data, error } = await supabase.from("Repayments").select("*");
+
+      if (error) {
+        console.error("Error fetching repayments:", error);
+      } else {
+        setRepayments(data);
+        setLoading(false); // Sets loading to false after data is fetched
+      }
+    }
+
+    fetchRepayments();
+  }, []);
+
+  // Helper function to determine badge class based on repayment status
   function getRepaymentBadgeClass(status) {
     if (status === "In Review") return "isReview";
     if (status === "In Progress") return "isProgress";
@@ -27,7 +53,6 @@ export default function OverviewPage() {
       </div>
 
       <div className="overviewTop">
-
         {/* LEFT — UTILIZATION */}
         <div className="card utilizationCard">
           <p className="cardLabel">LIMIT UTILIZATION</p>
@@ -36,14 +61,29 @@ export default function OverviewPage() {
             <ProgressArc value={metrics.utilizationPercent} />
 
             <div className="utilArcContent ">
-              <h2 className="stat-heading">{metrics.utilizationPercent}%</h2>
+              <h2 className="stat-heading">
+                {loading ? (
+                  <div className="skeleton skeletonCircle"></div>
+                ) : (
+                  `${metrics.utilizationPercent}%`
+                )}
+              </h2>
+
               <span className="utilLabel">used</span>
             </div>
           </div>
 
           <div className="utilRange">
-            <span>$0</span>
-            <span>${metrics.totalLimit.toLocaleString()}</span>
+            <span>
+              {loading ? <div className="skeleton skeletonMini"></div> : "$0"}
+            </span>
+            <span>
+              {loading ? (
+                <div className="skeleton skeletonMini"></div>
+              ) : (
+                `$${metrics.totalLimit.toLocaleString()}`
+              )}
+            </span>
           </div>
         </div>
 
@@ -57,8 +97,15 @@ export default function OverviewPage() {
               <span>Total number of trades with MODIFI</span>
             </div>
 
+            {/* Skeleton loader for total trades */}
             <div className="summaryMeta">
-              <h3>{metrics.totalTrades}</h3>
+              <h3>
+                {loading ? (
+                  <div className="skeleton skeletonStat"></div>
+                ) : (
+                  metrics.totalTrades
+                )}
+              </h3>
               <button type="button" className="viewLink">
                 View
               </button>
@@ -72,7 +119,13 @@ export default function OverviewPage() {
             </div>
 
             <div className="summaryMeta">
-              <h3>${metrics.totalTradeValue.toLocaleString()}</h3>
+              <h3>
+                {loading ? (
+                  <div className="skeleton skeletonStat"></div>
+                ) : (
+                  `$${metrics.totalTradeValue.toLocaleString()}`
+                )}
+              </h3>
               <button type="button" className="viewLink">
                 View
               </button>
@@ -87,7 +140,13 @@ export default function OverviewPage() {
             </div>
 
             <div className="summaryMeta">
-              <h3>{metrics.inProgress}</h3>
+              <h3>
+                {loading ? (
+                  <div className="skeleton skeletonStat"></div>
+                ) : (
+                  metrics.inProgress
+                )}
+              </h3>
               <button type="button" className="viewLink">
                 View
               </button>
@@ -116,46 +175,46 @@ export default function OverviewPage() {
             </div>
 
             <div className="billingRow">
-              <span className="invoiceLink">SF -1213</span>
-              <span>21/03/2022</span>
-              <span>€ 50,000.00</span>
-              <button type="button" className="detailsLink">
+              <span className="invoiceLink table-link">SF -1213</span>
+              <span className="table-cell">21/03/2022</span>
+              <span className="table-cell">€ 50,000.00</span>
+              <button type="button" className="table-link">
                 Details
               </button>
             </div>
 
             <div className="billingRow">
-              <span className="invoiceLink">SF -1255</span>
-              <span>21/03/2022</span>
-              <span>€ 25,000.00</span>
-              <button type="button" className="detailsLink">
+              <span className="invoiceLink table-link">SF -1255</span>
+              <span className="table-cell">21/03/2022</span>
+              <span className="table-cell">€ 25,000.00</span>
+              <button type="button" className="table-link">
                 Details
               </button>
             </div>
 
             <div className="billingRow">
-              <span className="invoiceLink">SF -1667</span>
-              <span>21/03/2022</span>
-              <span>€ 15,000.00</span>
-              <button type="button" className="detailsLink">
+              <span className="invoiceLink table-link">SF -1667</span>
+              <span className="table-cell">21/03/2022</span>
+              <span className="table-cell">€ 15,000.00</span>
+              <button type="button" className="table-link">
                 Details
               </button>
             </div>
 
             <div className="billingRow">
-              <span className="invoiceLink">SF -1667</span>
-              <span>21/03/2022</span>
-              <span>€ 35,000.00</span>
-              <button type="button" className="detailsLink">
+              <span className="invoiceLink table-link">SF -1667</span>
+              <span className="table-cell">21/03/2022</span>
+              <span className="table-cell">€ 35,000.00</span>
+              <button type="button" className="table-link">
                 Details
               </button>
             </div>
 
             <div className="billingRow">
-              <span className="invoiceLink">SF -1667</span>
-              <span>21/03/2022</span>
-              <span>€ 45,000.00</span>
-              <button type="button" className="detailsLink">
+              <span className="invoiceLink table-link">SF -1667</span>
+              <span className="table-cell">21/03/2022</span>
+              <span className="table-cell">€ 45,000.00</span>
+              <button type="button" className="table-link">
                 Details
               </button>
             </div>
@@ -168,7 +227,6 @@ export default function OverviewPage() {
             <p className="cardLabel">SHIPMENT TRACKER</p>
 
             <div className="shipmentControls">
-              
               <span className="shipmentPill">
                 <ClockCheck size={16} strokeWidth={2} color="#53A2D9" />
                 Progress
@@ -218,7 +276,7 @@ export default function OverviewPage() {
           </div>
 
           <div className="shipmentDetailsTop">
-            <button type="button" className="detailsLink">
+            <button type="button" className="table-link">
               Details
             </button>
           </div>
@@ -264,15 +322,15 @@ export default function OverviewPage() {
 
             {repayments.slice(0, 6).map((item) => (
               <div className="repaymentsRow" key={item.id}>
-                <span className="referenceLink">{item.id}</span>
+                <span className="table-cell">{item.id}</span>
 
-                <span>{item.tradePartner}</span>
+                <span className="table-cell">{item.tradePartner}</span>
 
-                <span>
+                <span className="table-cell">
                   {item.currency} {item.amount.toLocaleString()}
                 </span>
 
-                <span>{item.dueDate}</span>
+                <span className="table-cell">{item.dueDate}</span>
 
                 <div className="repaymentStatusCell">
                   <span
@@ -284,7 +342,7 @@ export default function OverviewPage() {
                   </span>
                 </div>
 
-                <button type="button" className="detailsLink">
+                <button type="button" className="detailsLink table-link">
                   Details
                 </button>
               </div>
