@@ -1,0 +1,37 @@
+/* COLORS */
+
+:root {
+  --color-modifi-blue-active: #58aee2;
+  --color-modifi-blue-soft: #d9edf9;
+  --color-modifi-green: #74b72e;
+
+  --color-bg-app: #f1f1f1;
+  --color-bg-panel: #ffffff;
+
+  --color-nav-inactive: #a9adb3;
+
+  --color-text-primary: #505761;
+  --color-text-secondary: #a7adb3;
+
+  --color-divider: #e3e5e7;
+
+  --siderail-active-label: #58aee2;
+  --siderail-active-fill: #eef8fd;
+  --siderail-active-border: #58aee2;
+
+  --siderail-inactive-label: #a9adb3;
+  --siderail-bg: #ffffff;
+}
+
+
+/* PAGE HEADINGS */
+
+.page-heading {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: var(--fw-semibold);
+  line-height: 1.2;
+
+  color: var(--text-primary);
+}

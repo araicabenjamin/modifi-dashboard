@@ -4,7 +4,7 @@ import { repayments } from "../data/repayments";
 import FilterBar from "../components/FilterBar";
 import { Trade, TradeStatus } from "../types/trade";
 // @ts-ignore: side-effect import for SCSS styling
-import "../styles/TradesPage.scss";
+import "../styles/tradespage.scss";
 
 
 export default function TradesPage() {
@@ -67,7 +67,7 @@ const filteredTrades: Trade[] = (repayments as Trade[]).filter((trade) => {
   return (
     <div className="tradesPage">
       <div className="tradesHeader">
-        <h1>Your Trades</h1>
+        <span className="page-heading">Your Trades</span>
 
         {/* Search input field: Updates the searchTerm state as the user types */}
 

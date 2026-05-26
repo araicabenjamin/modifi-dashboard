@@ -9,10 +9,12 @@ import shipImage from "../assets/images/ship.svg";
 
 import { repayments } from "../data/repayments.js";
 
-import "../styles/Overview.scss";
+import "../styles/overview.scss";
 
 export default function OverviewPage() {
   const [repayments, setRepayments] = useState([]);
+  const [billingData, setBillingData] = useState([]);
+
   const [loading, setLoading] = useState(true);
 
   const metrics = getOverviewMetrics(repayments);
@@ -33,6 +35,21 @@ export default function OverviewPage() {
 
     fetchRepayments();
   }, []);
+
+  useEffect(() => {
+    fetchBilling();
+  }, []);
+
+  async function fetchBilling() {
+    const { data, error } = await supabase.from("Billing").select("*");
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    setBillingData(data);
+  }
 
   // Helper function to determine badge class based on repayment status
   function getRepaymentBadgeClass(status) {
@@ -158,9 +175,11 @@ export default function OverviewPage() {
 
       {/* MIDDLE ROW */}
       <div className="overviewMiddle">
+        {/* LEFT CARD */}
         <div className="card billingCard">
           <div className="billingHeader">
             <p className="cardLabel">YOUR MONTHLY BILLING</p>
+
             <button type="button" className="viewLink">
               <span>View Past Billing</span>
               <ChevronRight size={16} />
@@ -168,6 +187,7 @@ export default function OverviewPage() {
           </div>
 
           <div className="billingTable">
+            {console.log(billingData)}
             <div className="billingTableHead">
               <span>Invoice</span>
               <span>Date</span>
@@ -175,50 +195,23 @@ export default function OverviewPage() {
               <span></span>
             </div>
 
-            <div className="billingRow">
-              <span className="invoiceLink table-link">SF -1213</span>
-              <span className="table-cell">21/03/2022</span>
-              <span className="table-cell">€ 50,000.00</span>
-              <button type="button" className="table-link">
-                Details
-              </button>
-            </div>
+            {billingData.map((item) => (
+              <div className="billingRow" key={item.id}>
+                <span className="invoiceLink table-link">
+                  {item.invoiceNumber}
+                </span>
 
-            <div className="billingRow">
-              <span className="invoiceLink table-link">SF -1255</span>
-              <span className="table-cell">21/03/2022</span>
-              <span className="table-cell">€ 25,000.00</span>
-              <button type="button" className="table-link">
-                Details
-              </button>
-            </div>
+                <span className="table-cell">{item.date}</span>
 
-            <div className="billingRow">
-              <span className="invoiceLink table-link">SF -1667</span>
-              <span className="table-cell">21/03/2022</span>
-              <span className="table-cell">€ 15,000.00</span>
-              <button type="button" className="table-link">
-                Details
-              </button>
-            </div>
+                <span className="table-cell">
+  € {Number(item.amount).toLocaleString()}
+</span>
 
-            <div className="billingRow">
-              <span className="invoiceLink table-link">SF -1667</span>
-              <span className="table-cell">21/03/2022</span>
-              <span className="table-cell">€ 35,000.00</span>
-              <button type="button" className="table-link">
-                Details
-              </button>
-            </div>
-
-            <div className="billingRow">
-              <span className="invoiceLink table-link">SF -1667</span>
-              <span className="table-cell">21/03/2022</span>
-              <span className="table-cell">€ 45,000.00</span>
-              <button type="button" className="table-link">
-                Details
-              </button>
-            </div>
+                <button type="button" className="detailsLink table-link">
+                  Details
+                </button>
+              </div>
+            ))}
           </div>
         </div>
 

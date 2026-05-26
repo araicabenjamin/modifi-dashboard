@@ -8,14 +8,7 @@
 
 .tradesHeader {
   display: flex;
-  gap: 10px;
-}
-
-.tradesHeader h1 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 700;
-  color: #23384d;
+  gap: 20px;
 }
 
 .tradesList {
@@ -62,7 +55,11 @@
   display: flex;
   align-items: center;
   padding: 24px 32px;
-  background: #ffffff;
+
+  background: var(--surface-primary);
+  border: 1px solid var(--border-light);
+
+
 }
 
 .tradeCardTop {
@@ -185,12 +182,16 @@
 
 .filtersBar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center;  
+  justify-content: flex-start;
+  gap: 12px;
+  
+
   margin-bottom: 10px;
   padding: 20px 24px;
-  border-radius: 4px;
-  background: #ffffff;
+
+  background: var(--surface-primary);
+  border: 1px solid var(--border-light);
 }
 
 .filtersLeft {
@@ -200,13 +201,17 @@
 }
 
 .filtersBar select {
-  height: 36px;
-  padding: 0 12px;
-  border: 1px solid #bfc5cc;
-  border-radius: 4px;
-  background: #fff;
-  color: #3f4854;
+  height: 40px;
+  min-width: 160px;
+
+  padding-left: 12px;
+  padding-right: 28px;
+
+  border: 1px solid var(--border-light);
+  background: var(--surface-primary);
+
   font-size: 14px;
+  color: var(--text-primary);
 }
 
 .filtersBar label {
@@ -216,10 +221,13 @@
   margin-left: 8px;
   color: #3f4854;
   font-size: 14px;
+
+  appearance: none;
 }
 
 .filtersBar button {
   border: none;
+ 
   background: transparent;
   color: #4aa3f0;
   font-size: 14px;
