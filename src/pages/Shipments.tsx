@@ -1,5 +1,4 @@
-import "../styles/shipments.scss";
-
+import "../styles/shipments-page.scss";
 
 export default function Shipments() {
   return (
