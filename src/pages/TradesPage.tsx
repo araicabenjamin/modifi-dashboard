@@ -4,7 +4,7 @@ import { repayments } from "../data/repayments";
 import FilterBar from "../components/FilterBar";
 import { Trade, TradeStatus } from "../types/trade";
 // @ts-ignore: side-effect import for SCSS styling
-import "../styles/tradespage.scss";
+import "../styles/trades-page.scss";
 
 
 export default function TradesPage() {

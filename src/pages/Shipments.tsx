@@ -1,4 +1,6 @@
+// @ts-ignore: side-effect import for SCSS styling
 import "../styles/shipments-page.scss";
+
 
 export default function Shipments() {
   return (

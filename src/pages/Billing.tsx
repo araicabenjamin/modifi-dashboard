@@ -1,3 +1,4 @@
+// @ts-ignore: side-effect import for SCSS styling
 import "../styles/billing-page.scss";
 
 export default function Billing() {
