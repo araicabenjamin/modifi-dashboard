@@ -9,7 +9,7 @@ import shipImage from "../assets/images/ship.svg";
 
 import { repayments } from "../data/repayments.js";
 
-import "../styles/overview.scss";
+import "../styles/overview-page.scss";
 
 export default function OverviewPage() {
   const [repayments, setRepayments] = useState([]);

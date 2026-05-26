@@ -1,4 +1,4 @@
-import "../styles/billing.scss";
+import "../styles/billing-page.scss";
 
 export default function Billing() {
   return (
