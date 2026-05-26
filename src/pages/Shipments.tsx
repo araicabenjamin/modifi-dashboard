@@ -1,5 +1,6 @@
 import "../styles/shipments.scss";
 
+
 export default function Shipments() {
   return (
     <div className="shipmentsPage">
