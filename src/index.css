@@ -98,3 +98,9 @@ body,
 body {
   background: var(--surface-secondary);
 }
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
