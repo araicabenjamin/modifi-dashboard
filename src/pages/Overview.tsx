@@ -114,7 +114,11 @@ export default function OverviewPage() {
 
             <div className="utilArcContent">
               <h2 className="stat-heading">
-                {loading ? "..." : `${metrics.utilizationPercent}%`}
+                {loading ? (
+                  <span className="skeleton skeletonStat" />
+                ) : (
+                  `${metrics.utilizationPercent}%`
+                )}
               </h2>
 
               <span className="utilLabel">used</span>
@@ -319,113 +323,86 @@ export default function OverviewPage() {
         </div>
       </div>
 
+      {/* REPAYMENTS */}
 
+      <div className="overviewBottom">
+        <div className="card repaymentsCard">
+          <p className="cardLabel">REPAYMENTS</p>
 
-  {/* REPAYMENTS */}
+          {/* DESKTOP */}
 
-<div className="overviewBottom">
-  <div className="card repaymentsCard">
-    <p className="cardLabel">REPAYMENTS</p>
+          <div className="repaymentsDesktop">
+            <div className="repaymentsTable">
+              <div className="repaymentsHead">
+                <span>Reference Code</span>
+                <span>Trade Partner</span>
+                <span>To be Paid</span>
+                <span>Due Date</span>
+                <span>Status</span>
+                <span></span>
+              </div>
 
-    {/* DESKTOP */}
+              {repayments.slice(0, 6).map((item) => (
+                <div className="repaymentsRow" key={item.id}>
+                  <span className="table-cell">{item.id}</span>
 
-    <div className="repaymentsDesktop">
-      <div className="repaymentsTable">
-        <div className="repaymentsHead">
-          <span>Reference Code</span>
-          <span>Trade Partner</span>
-          <span>To be Paid</span>
-          <span>Due Date</span>
-          <span>Status</span>
-          <span></span>
-        </div>
+                  <span className="table-cell">{item.tradePartner}</span>
 
-        {repayments.slice(0, 6).map((item) => (
-          <div className="repaymentsRow" key={item.id}>
-            <span className="table-cell">{item.id}</span>
+                  <span className="table-cell">
+                    {item.currency} {item.amount.toLocaleString()}
+                  </span>
 
-            <span className="table-cell">
-              {item.tradePartner}
-            </span>
+                  <span className="table-cell">{item.dueDate}</span>
 
-            <span className="table-cell">
-              {item.currency} {item.amount.toLocaleString()}
-            </span>
+                  <div className="repaymentStatusCell">
+                    <span
+                      className={`repaymentBadge ${getRepaymentBadgeClass(
+                        item.status,
+                      )}`}
+                    >
+                      {item.status}
+                    </span>
+                  </div>
 
-            <span className="table-cell">
-              {item.dueDate}
-            </span>
-
-            <div className="repaymentStatusCell">
-              <span
-                className={`repaymentBadge ${getRepaymentBadgeClass(
-                  item.status,
-                )}`}
-              >
-                {item.status}
-              </span>
+                  <button type="button" className="detailsLink table-link">
+                    Details
+                  </button>
+                </div>
+              ))}
             </div>
-
-            <button
-              type="button"
-              className="detailsLink table-link"
-            >
-              Details
-            </button>
           </div>
-        ))}
+
+          {/* MOBILE */}
+
+          <div className="repaymentsMobile">
+            {repayments.slice(0, 6).map((item) => (
+              <div className="repaymentMobileCard" key={item.id}>
+                <div className="repaymentMobileTop">
+                  <span className="repaymentReference">{item.id}</span>
+
+                  <span className="repaymentPartner">{item.tradePartner}</span>
+                </div>
+
+                <div className="repaymentMobileBottom">
+                  <span className="repaymentAmount">
+                    {item.currency} {item.amount.toLocaleString()}
+                  </span>
+
+                  <span className="repaymentDate">{item.dueDate}</span>
+
+                  <span
+                    className={`repaymentBadge ${getRepaymentBadgeClass(
+                      item.status,
+                    )}`}
+                  >
+                    {item.status}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
-
-    {/* MOBILE */}
-
-    <div className="repaymentsMobile">
-
-      {repayments.slice(0, 6).map((item) => (
-        <div
-          className="repaymentMobileCard"
-          key={item.id}
-        >
-
-          <div className="repaymentMobileTop">
-
-            <span className="repaymentReference">
-              {item.id}
-            </span>
-
-            <span className="repaymentPartner">
-              {item.tradePartner}
-            </span>
-
-          </div>
-
-          <div className="repaymentMobileBottom">
-
-            <span className="repaymentAmount">
-              {item.currency}{" "}
-              {item.amount.toLocaleString()}
-            </span>
-
-            <span className="repaymentDate">
-              {item.dueDate}
-            </span>
-
-            <span
-              className={`repaymentBadge ${getRepaymentBadgeClass(
-                item.status,
-              )}`}
-            >
-              {item.status}
-            </span>
-
-          </div>
-
-        </div>
-      ))}
-
-    </div>
-  </div>
-</div>
-</div>
   );
 }

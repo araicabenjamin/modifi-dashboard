@@ -345,7 +345,8 @@
   left: 58%;
   right: 18px;
   top: 50%;
-  border-top: 3px dotted #b8bec7;
+  height: 3px;
+  background: #d6dce3;
   transform: translateY(-50%);
 }
 
@@ -532,7 +533,7 @@
 
 .skeletonStat {
   width: 42px;
-  height: 18px;
+  height: 25px;
   border-radius: 5px;
   display: inline-block;
 }
