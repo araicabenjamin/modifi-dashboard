@@ -1,0 +1,553 @@
+.overviewPage {
+  padding: 32px 24px;
+}
+
+/* -------------------------------- */
+/* BUYER / SELLER TABS */
+/* -------------------------------- */
+
+.buyerSellerTabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 36px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.buyerSellerTab {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #c4c4c4;
+  cursor: pointer;
+}
+
+.buyerSellerTab.activeTab {
+  color: #5c6670;
+}
+
+.buyerSellerTab.activeTab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  background: #7bbd2a;
+}
+
+/* -------------------------------- */
+/* LAYOUT */
+/* -------------------------------- */
+
+.overviewTop,
+.overviewMiddle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.overviewMiddle {
+  margin-top: 24px;
+}
+
+.overviewBottom {
+  margin-top: 24px;
+  width: 100%;
+}
+
+/* -------------------------------- */
+/* CARD BASE */
+/* -------------------------------- */
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow:
+    0 4px 10px rgba(15, 23, 42, 0.04),
+    0 12px 24px rgba(15, 23, 42, 0.06);
+}
+
+.cardLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9aa3ad;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+}
+
+/* -------------------------------- */
+/* UTILIZATION CARD */
+/* -------------------------------- */
+
+.utilizationCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  overflow: visible;
+}
+
+.utilArcContainer {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.progressArc {
+  width: 100%;
+  max-width: 467px;
+  height: auto;
+  display: block;
+}
+
+.utilArcContent {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.utilArcContent h2 {
+  margin: 0;
+}
+
+.utilLabel {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  color: #51565c;
+}
+
+.utilRange {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+  margin-top: -20px;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.utilRange span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------------------------- */
+/* SUMMARY CARD */
+/* -------------------------------- */
+
+.summaryCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.summaryRow:last-child {
+  border-bottom: none;
+}
+
+.summaryText p {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #3f4a59;
+}
+
+.summaryText span {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #a0a8b3;
+}
+
+.summaryMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.summaryMeta h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: var(--fw-semibold);
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+/* -------------------------------- */
+/* LINKS / BUTTONS */
+/* -------------------------------- */
+
+.viewLink,
+.table-link,
+.detailsLink {
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  font-size: 13px;
+  color: #4da3ff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* -------------------------------- */
+/* BILLING */
+/* -------------------------------- */
+
+.billingTable {
+  margin-top: 24px;
+}
+
+.billingTableHead,
+.billingRow {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr auto;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.billingTableHead {
+  margin-bottom: 14px;
+}
+
+.billingTableHead span {
+  font-size: 15px;
+  color: #8e98a7;
+}
+
+.billingRow {
+  padding: 12px 0;
+}
+
+/* -------------------------------- */
+/* SHIPMENT */
+/* -------------------------------- */
+
+.shipmentCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.shipmentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.shipmentControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.shipmentPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 32px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5aa8f7;
+  background: #eaf4ff;
+}
+
+.shipmentNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shipmentNav span {
+  font-size: 15px;
+  color: #4a5565;
+}
+
+.shipmentArrow {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1;
+  color: #7f8996;
+  cursor: pointer;
+}
+
+/* TRACKER */
+
+.shipmentLineWrap {
+  position: relative;
+  margin-top: 24px;
+}
+
+.shipmentLine {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    #53a2d9 0%,
+    #53a2d9 58%,
+    transparent 58%,
+    transparent 100%
+  );
+}
+
+.shipmentLine::before,
+.shipmentLine::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+}
+
+.shipmentLine::before {
+  left: 0;
+  background: #53a2d9;
+}
+
+.shipmentLine::after {
+  right: 0;
+  background: #dfe5eb;
+}
+
+.shipmentLineWrap::after {
+  content: "";
+  position: absolute;
+  left: 58%;
+  right: 18px;
+  top: 50%;
+  height: 3px;
+  background: #d6dce3;
+  transform: translateY(-50%);
+}
+
+.shipImgContainer {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -99%);
+  z-index: 3;
+}
+
+.shipmentTrackerImage {
+  width: 70px;
+  display: block;
+}
+
+.shipmentLocations {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.shipmentLocations h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #3f4a59;
+}
+
+.shipmentLocations span {
+  font-size: 13px;
+  color: #97a1ad;
+}
+
+.shipmentRightLocation {
+  text-align: right;
+}
+
+.shipmentDetailsTop {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.shipmentDetailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+  margin-top: 18px;
+}
+
+.shipmentDetailsGrid h5 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #3f4a59;
+}
+
+.shipmentDetailsGrid p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #a0a8b3;
+}
+
+/* -------------------------------- */
+/* REPAYMENTS */
+/* -------------------------------- */
+
+.repaymentsCard {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.repaymentsTable {
+  width: 100%;
+}
+
+.repaymentsHead,
+.repaymentsRow {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1.2fr 1.1fr 1.1fr 0.8fr;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.repaymentsHead {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef1f4;
+  margin-bottom: 6px;
+}
+
+.repaymentsHead span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #9aa3ad;
+}
+
+.repaymentsRow {
+  padding: 16px 0;
+  border-bottom: 1px solid #f5f6f8;
+}
+
+.repaymentsRow:last-child {
+  border-bottom: none;
+}
+
+.repaymentsRow span {
+  font-size: 14px;
+}
+
+.repaymentStatusCell {
+  display: flex;
+  align-items: center;
+}
+
+.repaymentBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.isOverdue {
+  background: #ffe7e7;
+  color: #e05656;
+}
+
+.isProgress {
+  background: #e6f0ff;
+  color: #1d4ed8;
+}
+
+.isCompleted {
+  background: #e6f4ea;
+  color: #1e7a3b;
+}
+
+.isReview {
+  background: #fff4e7;
+  color: #c2410c;
+}
+
+/* -------------------------------- */
+/* SKELETONS */
+/* -------------------------------- */
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: #eef2f6;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.55),
+    transparent
+  );
+
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeletonStat {
+  width: 42px;
+  height: 25px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.skeletonCircle {
+  width: 64px;
+  height: 26px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.skeletonMini {
+  width: 32px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+}
