@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
   HiHome,
@@ -12,34 +15,52 @@ import {
 import { FaShip } from "react-icons/fa";
 
 const Sidebar = () => {
+  const pathname = usePathname();
+
   return (
     <aside className="sidebar">
       <nav className="sidebarNav">
-        <Link href="/" className="navItem">
+
+        <Link
+          href="/"
+          className={`navItem ${pathname === "/" ? "active" : ""}`}
+        >
           <HiHome />
           <span className="navLabel">Overview</span>
         </Link>
 
-        <Link href="/trades" className="navItem">
+        <Link
+          href="/trades"
+          className={`navItem ${pathname === "/trades" ? "active" : ""}`}
+        >
           <HiGlobeAmericas />
           <span className="navLabel">Trades</span>
         </Link>
 
-        <Link href="/billing" className="navItem">
+        <Link
+          href="/billing"
+          className={`navItem ${pathname === "/billing" ? "active" : ""}`}
+        >
           <HiCreditCard />
           <span className="navLabel">Billing</span>
         </Link>
 
-        <Link href="/shipments" className="navItem">
+        <Link
+          href="/shipments"
+          className={`navItem ${pathname === "/shipments" ? "active" : ""}`}
+        >
           <FaShip />
           <span className="navLabel">Shipments</span>
         </Link>
 
         <div className="navItem">
-          <HiGlobeAlt /> <span className="navLabel">Services</span>
+          <HiGlobeAlt />
+          <span className="navLabel">Services</span>
+
           <span className="newBadge">
             <span>New</span>
           </span>
+
           <HiChevronRight className="servicesArrow" />
         </div>
 
@@ -47,6 +68,7 @@ const Sidebar = () => {
           <HiPlus />
           <span className="navLabel">Finance Trade</span>
         </div>
+
       </nav>
     </aside>
   );
