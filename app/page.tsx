@@ -1,10 +1,5 @@
-import Overview from "@/pages/Overview";
-import DashboardLayout from "@/components/DashboardLayout";
+import Login from "@/pages/Login";
 
 export default function Page() {
-  return (
-    <DashboardLayout>
-      <Overview />
-    </DashboardLayout>
-  );
+  return <Login />;
 }
