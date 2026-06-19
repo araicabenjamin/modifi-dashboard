@@ -21,8 +21,8 @@ const Sidebar = ({ sidebarOpen, onClose }) => {
     <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
       <nav className="sidebarNav">
         <Link
-          href="/"
-          className={`navItem ${pathname === "/" ? "active" : ""}`}
+          href="/overview"
+          className={`navItem ${pathname === "/overview" ? "active" : ""}`}
         >
           <HiHome />
           <span className="navLabel">Overview</span>
