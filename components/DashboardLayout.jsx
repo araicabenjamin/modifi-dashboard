@@ -1,5 +1,4 @@
 "use client";
-
 import "../styles/globals.scss";
 import { useState } from "react";
 import Sidebar from "./Sidebar";

@@ -1,376 +1,371 @@
-.billingPage {
-  padding: 32px 24px;
+/* -------------------------------- */
+/* HEADER */
+/* -------------------------------- */
 
-  /* -------------------------------- */
-  /* HEADER */
-  /* -------------------------------- */
+.billingHeader {
+  margin-bottom: 24px;
+}
 
-  .billingHeader {
-    margin-bottom: 24px;
-    
-  }
+/* -------------------------------- */
+/* TOP CARD */
+/* -------------------------------- */
 
-  /* -------------------------------- */
-  /* TOP CARD */
-  /* -------------------------------- */
+.billingTopCard {
+  display: flex;
+  align-items: stretch;
+  gap: 32px;
 
-  .billingTopCard {
-    display: flex;
-    align-items: stretch;
-    gap: 32px;
+  padding: 28px;
 
-    padding: 28px;
+  background: var(--surface-primary);
+  border: 1px solid var(--border-light);
+}
 
-    background: var(--surface-primary);
-    border: 1px solid var(--border-light);
-  }
+/* -------------------------------- */
+/* SECTIONS */
+/* -------------------------------- */
 
-  /* -------------------------------- */
-  /* SECTIONS */
-  /* -------------------------------- */
+.uploadSection,
+.searchSection {
+  flex: 1;
 
-  .uploadSection,
-  .searchSection {
-    flex: 1;
+  h3 {
+    margin: 0 0 8px;
 
-    h3 {
-      margin: 0 0 8px;
-
-      font-size: 18px;
-      font-weight: var(--fw-semibold);
-
-      color: var(--text-primary);
-    }
-
-    p {
-      margin: 0 0 24px;
-
-      font-size: 14px;
-      line-height: 1.5;
-
-      color: var(--text-secondary);
-    }
-  }
-
-  /* -------------------------------- */
-  /* DIVIDER */
-  /* -------------------------------- */
-
-  .divider {
-    position: relative;
-
-    width: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &::before {
-      content: "";
-      position: absolute;
-
-      top: 0;
-      bottom: 0;
-
-      width: 1px;
-
-      background: var(--border-light);
-    }
-
-    span {
-      position: relative;
-      z-index: 2;
-
-      padding: 8px;
-
-      background: var(--surface-primary);
-
-      font-size: 14px;
-      color: var(--text-secondary);
-    }
-  }
-
-  /* -------------------------------- */
-  /* UPLOAD */
-  /* -------------------------------- */
-
-  .uploadRow {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .uploadBtn {
-    min-width: 140px;
-    height: 42px;
-
-    padding: 0 20px;
-
-    border: 1px solid var(--brand-green);
-    background: transparent;
-
-    font-size: 14px;
-    font-weight: var(--fw-semibold);
-
-    color: var(--brand-green);
-
-    cursor: pointer;
-  }
-
-  .infoIcon {
     font-size: 18px;
-    color: var(--text-muted);
-  }
-
-  /* -------------------------------- */
-  /* SEARCH */
-  /* -------------------------------- */
-
-  .searchRow {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-
-    input {
-      width: 220px;
-      height: 42px;
-
-      padding: 0 14px;
-
-      border: 1px solid var(--border-light);
-      background: var(--surface-primary);
-
-      font-size: 14px;
-      color: var(--text-primary);
-
-      outline: none;
-    }
-
-    input::placeholder {
-      color: var(--text-secondary);
-    }
-  }
-
-  .submitBtn {
-    min-width: 120px;
-    height: 42px;
-
-    border: none;
-    background: var(--brand-blue);
-
-    font-size: 14px;
     font-weight: var(--fw-semibold);
-
-    color: white;
-
-    cursor: pointer;
-  }
-
-  .resetBtn {
-    border: none;
-    background: none;
-
-    padding: 0;
-
-    font-size: 14px;
-    font-weight: var(--fw-medium);
-
-    color: var(--text-secondary);
-
-    cursor: pointer;
-  }
-
-  /* -------------------------------- */
-  /* RECENT */
-  /* -------------------------------- */
-
-  .recentHeader {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    margin: 28px 0 16px;
-
-    font-size: 15px;
-    font-weight: var(--fw-medium);
 
     color: var(--text-primary);
   }
 
-  .chevron {
-    font-size: 12px;
+  p {
+    margin: 0 0 24px;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: var(--text-secondary);
   }
+}
 
-  /* -------------------------------- */
-  /* LIST */
-  /* -------------------------------- */
+/* -------------------------------- */
+/* DIVIDER */
+/* -------------------------------- */
 
-  .invoiceList {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+.divider {
+  position: relative;
 
-  /* -------------------------------- */
-  /* CARD */
-  /* -------------------------------- */
+  width: 48px;
 
-  .invoiceCard {
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr auto auto;
-    align-items: center;
-    column-gap: 24px;
-
-    padding: 24px;
-
-    background: var(--surface-primary);
-    border: 1px solid var(--border-light);
-  }
-
-  /* -------------------------------- */
-  /* PROGRESS */
-  /* -------------------------------- */
-
-  .progressLine {
+  &::before {
+    content: "";
     position: absolute;
 
     top: 0;
-    left: 0;
+    bottom: 0;
 
-    height: 4px;
+    width: 1px;
 
-    border-radius: 999px;
-
-    background: var(--brand-blue);
+    background: var(--border-light);
   }
 
-  .progress80 {
-    width: 42%;
-  }
+  span {
+    position: relative;
+    z-index: 2;
 
-  .progress60 {
-    width: 30%;
-  }
+    padding: 8px;
 
-  .progress40 {
-    width: 18%;
-  }
+    background: var(--surface-primary);
 
-  /* -------------------------------- */
-  /* LEFT */
-  /* -------------------------------- */
-
-  .invoiceLeft {
-    h4 {
-      margin: 0 0 4px;
-
-      font-size: 18px;
-      font-weight: var(--fw-semibold);
-
-      color: var(--text-primary);
-    }
-
-    p {
-      margin: 0 0 12px;
-
-      font-size: 14px;
-
-      color: var(--text-muted);
-    }
-  }
-
-  .fileRow {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-secondary);
   }
+}
 
-  /* -------------------------------- */
-  /* MIDDLE */
-  /* -------------------------------- */
+/* -------------------------------- */
+/* UPLOAD */
+/* -------------------------------- */
 
-  .invoiceMiddle {
-    .label {
-      display: block;
+.uploadRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
-      margin-bottom: 4px;
+.uploadBtn {
+  min-width: 140px;
+  height: 42px;
 
-      font-size: 13px;
-      font-weight: var(--fw-semibold);
+  padding: 0 20px;
 
-      color: var(--text-primary);
-    }
+  border: 1px solid var(--brand-green);
+  background: transparent;
 
-    p {
-      margin: 0;
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
 
-      font-size: 14px;
+  color: var(--brand-green);
 
-      color: var(--text-muted);
-    }
+  cursor: pointer;
+}
+
+.infoIcon {
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+/* -------------------------------- */
+/* SEARCH */
+/* -------------------------------- */
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  input {
+    width: 220px;
+    height: 42px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border-light);
+    background: var(--surface-primary);
+
+    font-size: 14px;
+    color: var(--text-primary);
+
+    outline: none;
   }
 
-  /* -------------------------------- */
-  /* AMOUNT */
-  /* -------------------------------- */
+  input::placeholder {
+    color: var(--text-secondary);
+  }
+}
 
-  .invoiceAmount {
-    font-size: 16px;
+.submitBtn {
+  min-width: 120px;
+  height: 42px;
+
+  border: none;
+  background: var(--brand-blue);
+
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.resetBtn {
+  border: none;
+  background: none;
+
+  padding: 0;
+
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+}
+
+/* -------------------------------- */
+/* RECENT */
+/* -------------------------------- */
+
+.recentHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 28px 0 16px;
+
+  font-size: 15px;
+  font-weight: var(--fw-medium);
+
+  color: var(--text-primary);
+}
+
+.chevron {
+  font-size: 12px;
+}
+
+/* -------------------------------- */
+/* LIST */
+/* -------------------------------- */
+
+.invoiceList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* -------------------------------- */
+/* CARD */
+/* -------------------------------- */
+
+.invoiceCard {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto auto;
+  align-items: center;
+  column-gap: 24px;
+
+  padding: 24px;
+
+  background: var(--surface-primary);
+  border: 1px solid var(--border-light);
+}
+
+/* -------------------------------- */
+/* PROGRESS */
+/* -------------------------------- */
+
+.progressLine {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  height: 4px;
+
+  border-radius: 999px;
+
+  background: var(--brand-blue);
+}
+
+.progress80 {
+  width: 42%;
+}
+
+.progress60 {
+  width: 30%;
+}
+
+.progress40 {
+  width: 18%;
+}
+
+/* -------------------------------- */
+/* LEFT */
+/* -------------------------------- */
+
+.invoiceLeft {
+  h4 {
+    margin: 0 0 4px;
+
+    font-size: 18px;
     font-weight: var(--fw-semibold);
 
     color: var(--text-primary);
   }
 
-  /* -------------------------------- */
-  /* STATUS */
-  /* -------------------------------- */
+  p {
+    margin: 0 0 12px;
 
-  .status {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
+    font-size: 14px;
 
-    min-height: 32px;
-
-    padding: 0 14px;
-
-    border-radius: 999px;
-
-    font-size: 13px;
-    font-weight: var(--fw-medium);
-
-    white-space: nowrap;
-  }
-
-  .upcoming {
-    background: #eaf4ff;
-    color: var(--brand-blue);
-  }
-
-  .overdue {
-    background: #ffe7e7;
-    color: var(--danger);
-  }
-
-  .paid {
-    background: #edf1f5;
     color: var(--text-muted);
   }
+}
 
-  /* -------------------------------- */
-  /* DETAILS */
-  /* -------------------------------- */
+.fileRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
-  .details {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* -------------------------------- */
+/* MIDDLE */
+/* -------------------------------- */
+
+.invoiceMiddle {
+  .label {
+    display: block;
+
+    margin-bottom: 4px;
+
     font-size: 13px;
-    color: var(--brand-blue);
+    font-weight: var(--fw-semibold);
 
-    cursor: pointer;
+    color: var(--text-primary);
   }
+
+  p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: var(--text-muted);
+  }
+}
+
+/* -------------------------------- */
+/* AMOUNT */
+/* -------------------------------- */
+
+.invoiceAmount {
+  font-size: 16px;
+  font-weight: var(--fw-semibold);
+
+  color: var(--text-primary);
+}
+
+/* -------------------------------- */
+/* STATUS */
+/* -------------------------------- */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  min-height: 32px;
+
+  padding: 0 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: var(--fw-medium);
+
+  white-space: nowrap;
+}
+
+.upcoming {
+  background: #eaf4ff;
+  color: var(--brand-blue);
+}
+
+.overdue {
+  background: #ffe7e7;
+  color: var(--danger);
+}
+
+.paid {
+  background: #edf1f5;
+  color: var(--text-muted);
+}
+
+/* -------------------------------- */
+/* DETAILS */
+/* -------------------------------- */
+
+.details {
+  font-size: 13px;
+  color: var(--brand-blue);
+
+  cursor: pointer;
 }

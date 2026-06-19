@@ -13,8 +13,8 @@ import ProgressArc from "../components/ProgressArc";
 import "../styles/overview-page.scss";
 import "../styles/overview-mobile.scss";
 
-import type { Trade, TradeStatus } from "../types/trade";
-import shipImage from "../assets/images/ship.svg";
+import type { Trade, TradeStatus } from "../types/trade"; 
+import shipImage from "../assets/images/ship.svg";  
 
 type BillingItem = {
   id: number;
@@ -232,7 +232,7 @@ export default function OverviewPage() {
 
         {/* SHIPMENT */}
 
-        <div className="card shipmentCard">
+        <div className="card shipmenttrackerCard">
           <div className="shipmentHeader">
             <p className="cardLabel">SHIPMENT TRACKER</p>
 
