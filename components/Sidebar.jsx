@@ -14,13 +14,12 @@ import {
 
 import { FaShip } from "react-icons/fa";
 
-const Sidebar = () => {
+const Sidebar = ({ sidebarOpen, onClose }) => {
   const pathname = usePathname();
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
       <nav className="sidebarNav">
-
         <Link
           href="/"
           className={`navItem ${pathname === "/" ? "active" : ""}`}
@@ -68,7 +67,6 @@ const Sidebar = () => {
           <HiPlus />
           <span className="navLabel">Finance Trade</span>
         </div>
-
       </nav>
     </aside>
   );

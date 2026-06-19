@@ -419,11 +419,19 @@
 /* REPAYMENTS */
 /* -------------------------------- */
 
+.repaymentsDesktop {
+  display: block;
+}
+
+.repaymentsMobile {
+  display: none;
+}
+
 .repaymentsCard {
   background: #ffffff;
   border-radius: 10px;
   padding: 24px 28px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
 }
 
 .repaymentsTable {

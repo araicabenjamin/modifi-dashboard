@@ -1,17 +1,8 @@
-
-.repaymentsMobile {
-  display: none;
-}
+/* =========================
+   OVERVIEW - MOBILE 
+========================= */
 
 @media (max-width: 768px) {
-  .repaymentsMobile {
-    display: none;
-  }
-
-  .sidebar {
-    display: none;
-  }
-
   .overviewPage {
     padding: 16px;
     width: 100%;
@@ -28,10 +19,6 @@
     gap: 16px;
   }
 }
-
-/* =========================
-   OVERVIEW - MOBILE 430px
-========================= */
 
 @media (max-width: 430px) {
   .overviewPage {
@@ -58,10 +45,7 @@
     font-size: 12px;
   }
 
-  /* =========================
-   SHIPMENT TRACKER - MOBILE 430px
-========================= */
-
+  //SHIPMENT TRACKER
   .shipmentHeader {
     display: flex;
     flex-direction: column;
@@ -76,16 +60,14 @@
   .shipmentNav {
     margin-left: auto;
   }
-
-  
 }
 
+  /* =========================
+   REPAYMENTS TABLE
+========================= */
 
 @media (max-width: 600px) {
 
-/* =========================
-   REPAYMENTS - MOBILE 430px
-========================= */
 
   /* hide desktop table */
 
@@ -154,7 +136,7 @@
   }
 
   /* status badge */
-
+  
   .repaymentBadge {
     width: fit-content;
   }

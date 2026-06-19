@@ -211,7 +211,7 @@ export default function OverviewPage() {
             </div>
 
             {billingData.map((item) => (
-              <div className="billingRow" key={item.id}>
+              <div className="billingRow" key={item.invoiceNumber}>
                 <span className="invoiceLink table-link">
                   {item.invoiceNumber}
                 </span>
