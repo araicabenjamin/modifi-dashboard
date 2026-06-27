@@ -1,4 +1,8 @@
-export default function FilterBar({ onReset, statusFilter, setStatusFilter }) {
+export default function FilterBar({
+  onReset,
+  statusFilter,
+  setStatusFilter,
+}) {
   return (
     <div className="filtersBar">
       <div className="filtersLeft">
@@ -27,16 +31,18 @@ export default function FilterBar({ onReset, statusFilter, setStatusFilter }) {
         <select>
           <option>Role</option>
         </select>
+      </div> {/* <-- Close filtersLeft here */}
 
-        <label className="filterCheckbox">
-          <input type="checkbox" />
-          Action required
-        </label>
+      <div className="filtersRight">
+  <label className="filterCheckbox">
+    <input type="checkbox" className="checkbox" />
+    Action required
+  </label>
+
+  <button className="resetButton">
+    Reset
+  </button>
       </div>
-
-      <button className="resetButton" onClick={onReset}>
-        Reset
-      </button>
-    </div>
+    </div> /* <-- Close filtersBar */
   );
 }

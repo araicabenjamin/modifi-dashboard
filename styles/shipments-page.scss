@@ -1,378 +1,385 @@
 /* -------------------------------- */
-  /* HEADER */
-  /* -------------------------------- */
+/* HEADER */
+/* -------------------------------- */
 
-  .shipmentsHeader {
-    margin-bottom: 24px;
+.shipmentsHeader {
+  margin-bottom: 24px;
+}
 
-    h1 {
-      margin: 0;
+/* -------------------------------- */
+/* TOP CARD */
+/* -------------------------------- */
 
-      font-size: 28px;
-      font-weight: var(--fw-semibold);
+.shipmentsTopCard {
+  display: flex;
+  align-items: stretch;
+  gap: 32px;
 
-      color: var(--text-primary);
-    }
-  }
+  padding: 28px;
 
-  /* -------------------------------- */
-  /* TOP CARD */
-  /* -------------------------------- */
+  background: var(--surface-primary);
+  border: 1px solid var(--border-light);
+}
 
-  .shipmentsTopCard {
-    display: flex;
-    align-items: stretch;
-    gap: 32px;
+/* -------------------------------- */
+/* SECTIONS */
+/* -------------------------------- */
 
-    padding: 18px 20px;
+.uploadSection,
+.searchSection {
+  flex: 1;
 
-    background: var(--surface-primary);
-    border: 1px solid var(--border-light);
-  }
+  h3 {
+    margin: 0 0 8px;
 
-  /* -------------------------------- */
-  /* SECTIONS */
-  /* -------------------------------- */
-
-  .uploadSection,
-  .searchSection {
-    flex: 1;
-
-    h3 {
-      margin: 0 0 8px;
-
-      font-size: 14px;
-      font-weight: var(--fw-semibold);
-
-      color: var(--text-primary);
-    }
-
-    p {
-      margin: 0 0 20px;
-
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-  }
-
-  /* -------------------------------- */
-  /* DIVIDER */
-  /* -------------------------------- */
-
-  .divider {
-    position: relative;
-
-    width: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &::before {
-      content: "";
-      position: absolute;
-
-      top: 0;
-      bottom: 0;
-
-      width: 1px;
-
-      background: var(--border-light);
-    }
-
-    span {
-      position: relative;
-      z-index: 2;
-
-      padding: 6px;
-
-      background: var(--surface-primary);
-
-      font-size: 12px;
-      color: var(--text-secondary);
-    }
-  }
-
-  /* -------------------------------- */
-  /* UPLOAD */
-  /* -------------------------------- */
-
-  .uploadRow {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .uploadBtn {
-    min-width: 190px;
-    height: 42px;
-
-    border: 1px solid var(--brand-green);
-    background: transparent;
-
-    font-size: 13px;
+    font-size: 18px;
     font-weight: var(--fw-semibold);
-
-    color: var(--brand-green);
-
-    cursor: pointer;
-  }
-
-  .infoIcon {
-    font-size: 16px;
-    color: var(--text-muted);
-  }
-
-  /* -------------------------------- */
-  /* SEARCH */
-  /* -------------------------------- */
-
-  .searchRow {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    input {
-      width: 200px;
-      height: 42px;
-
-      padding: 0 14px;
-
-      border: 1px solid var(--border-light);
-
-      background: var(--surface-primary);
-
-      font-size: 13px;
-      color: var(--text-primary);
-
-      outline: none;
-    }
-
-    input::placeholder {
-      color: var(--text-muted);
-    }
-  }
-
-  .dateInput {
-    position: relative;
-
-    input {
-      width: 180px;
-      padding-right: 36px;
-    }
-  }
-
-  .calendarIcon {
-    position: absolute;
-
-    top: 50%;
-    right: 12px;
-
-    transform: translateY(-50%);
-
-    font-size: 14px;
-    color: var(--brand-blue);
-  }
-
-  .submitBtn {
-    min-width: 130px;
-    height: 42px;
-
-    border: none;
-    background: var(--brand-blue);
-
-    font-size: 13px;
-    font-weight: var(--fw-semibold);
-
-    color: white;
-
-    cursor: pointer;
-  }
-
-  .resetBtn {
-    border: none;
-    background: none;
-
-    font-size: 13px;
-    font-weight: var(--fw-medium);
-
-    color: var(--text-secondary);
-
-    cursor: pointer;
-  }
-
-  /* -------------------------------- */
-  /* RECENT */
-  /* -------------------------------- */
-
-  .recentHeader {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    margin: 16px 0 12px;
-
-    font-size: 14px;
-    font-weight: var(--fw-medium);
 
     color: var(--text-primary);
   }
 
-  .chevron {
-    font-size: 11px;
+  p {
+    margin: 0 0 24px;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: var(--text-secondary);
   }
+}
 
-  /* -------------------------------- */
-  /* LIST */
-  /* -------------------------------- */
+/* -------------------------------- */
+/* DIVIDER */
+/* -------------------------------- */
 
-  .shipmentList {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+.divider {
+  position: relative;
 
-  /* -------------------------------- */
-  /* CARD */
-  /* -------------------------------- */
+  width: 48px;
 
-  .shipmentCard {
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display: grid;
-    grid-template-columns: 1.3fr 1.3fr 1fr auto auto;
-    align-items: center;
-
-    padding: 22px 18px;
-
-    background: var(--surface-primary);
-    border: 1px solid var(--border-light);
-  }
-
-  /* -------------------------------- */
-  /* PROGRESS */
-  /* -------------------------------- */
-
-  .progressLine {
+  &::before {
+    content: "";
     position: absolute;
 
     top: 0;
-    left: 0;
+    bottom: 0;
 
-    height: 4px;
+    width: 1px;
 
-    background: #9cc6eb;
+    background: var(--border-light);
   }
 
-  .progress50 {
-    width: 48%;
-  }
+  span {
+    position: relative;
+    z-index: 2;
 
-  .progress30 {
-    width: 26%;
-  }
+    padding: 8px;
 
-  .progress20 {
-    width: 14%;
-  }
+    background: var(--surface-primary);
 
-  .progress40 {
-    width: 38%;
-  }
-
-  .progress70 {
-    width: 66%;
-  }
-
-  /* -------------------------------- */
-  /* LOCATION */
-  /* -------------------------------- */
-
-  .shipmentLocation {
-    h4 {
-      margin: 0 0 6px;
-
-      font-size: 16px;
-      font-weight: var(--fw-semibold);
-
-      color: var(--text-primary);
-    }
-
-    p {
-      margin: 0 0 18px;
-
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-  }
-
-  /* -------------------------------- */
-  /* FILE */
-  /* -------------------------------- */
-
-  .fileRow {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-secondary);
   }
+}
 
-  /* -------------------------------- */
-  /* CONTAINER */
-  /* -------------------------------- */
+/* -------------------------------- */
+/* UPLOAD */
+/* -------------------------------- */
 
-  .shipmentContainer {
-    h4 {
-      margin: 0 0 6px;
+.uploadRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
-      font-size: 16px;
-      font-weight: var(--fw-semibold);
+.uploadBtn {
+  min-width: 140px;
+  height: 42px;
 
-      color: var(--text-primary);
-    }
+  padding: 0 20px;
 
-    p {
-      margin: 0;
+  border: 1px solid var(--brand-green);
+  background: transparent;
 
-      font-size: 13px;
-      color: var(--text-muted);
-    }
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+
+  color: var(--brand-green);
+
+  cursor: pointer;
+}
+
+.infoIcon {
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+/* -------------------------------- */
+/* SEARCH */
+/* -------------------------------- */
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  input {
+    width: 220px;
+    height: 42px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border-light);
+    background: var(--surface-primary);
+
+    font-size: 14px;
+    color: var(--text-primary);
+
+    outline: none;
   }
 
-  /* -------------------------------- */
-  /* STATUS */
-  /* -------------------------------- */
-
-  .shipmentStatus {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-
-    min-height: 34px;
-
-    padding: 0 18px;
-
-    border-radius: 999px;
-
-    background: var(--brand-blue);
-
-    font-size: 13px;
-    font-weight: var(--fw-medium);
-
-    color: white;
-
-    white-space: nowrap;
-  }
-
-  /* -------------------------------- */
-  /* DETAILS */
-  /* -------------------------------- */
-
-  .shipmentDetails {
-    font-size: 13px;
+  input::placeholder {
     color: var(--text-secondary);
-
-    cursor: pointer;
   }
+}
+
+.dateInput {
+  position: relative;
+
+  input {
+    width: 220px;
+    padding-right: 40px;
+  }
+}
+
+.calendarIcon {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  transform: translateY(-50%);
+
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.searchActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  flex-shrink: 0;
+}
+
+.submitBtn {
+  min-width: 120px;
+  height: 42px;
+
+  border: none;
+  background: var(--brand-blue);
+
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.resetBtn {
+  padding: 0;
+
+  border: none;
+  background: none;
+
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+}
+
+/* -------------------------------- */
+/* RECENT */
+/* -------------------------------- */
+
+.recentHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 28px 0 16px;
+
+  font-size: 15px;
+  font-weight: var(--fw-medium);
+
+  color: var(--text-primary);
+}
+
+.chevron {
+  font-size: 12px;
+}
+
+/* -------------------------------- */
+/* LIST */
+/* -------------------------------- */
+
+.shipmentList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* -------------------------------- */
+/* CARD */
+/* -------------------------------- */
+
+.shipmentCard {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr auto;
+  align-items: start;
+  column-gap: 40px;
+
+  padding: 24px;
+
+  background: var(--surface-primary);
+  border: 1px solid var(--border-light);
+}
+
+.shipmentActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  justify-content: space-between;
+}
+
+/* -------------------------------- */
+/* PROGRESS */
+/* -------------------------------- */
+
+.progressLine {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  height: 4px;
+
+  border-radius: 999px;
+
+  background: var(--brand-blue);
+}
+
+.progress20 { width: 18%; }
+.progress30 { width: 30%; }
+.progress40 { width: 42%; }
+.progress50 { width: 56%; }
+.progress70 { width: 74%; }
+
+/* -------------------------------- */
+/* LOCATION */
+/* -------------------------------- */
+
+.shipmentLocation {
+  h4 {
+    margin: 0 0 4px;
+
+    font-size: 18px;
+    font-weight: var(--fw-semibold);
+
+    color: var(--text-primary);
+  }
+
+  p {
+    margin: 0 0 12px;
+
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+}
+
+/* -------------------------------- */
+/* FILE */
+/* -------------------------------- */
+
+.fileRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* -------------------------------- */
+/* CONTAINER */
+/* -------------------------------- */
+
+.shipmentContainer {
+  h4 {
+    margin: 0 0 4px;
+
+    font-size: 18px;
+    font-weight: var(--fw-semibold);
+
+    color: var(--text-primary);
+  }
+
+  p {
+    margin: 0;
+
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+}
+
+/* -------------------------------- */
+/* STATUS */
+/* -------------------------------- */
+
+.shipmentStatus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: fit-content;
+
+  min-height: 34px;
+
+  padding: 0 18px;
+
+  border-radius: 999px;
+
+  background: var(--brand-blue);
+
+  font-size: 13px;
+  font-weight: var(--fw-medium);
+
+  color: white;
+
+  white-space: nowrap;
+}
+
+/* -------------------------------- */
+/* DETAILS */
+/* -------------------------------- */
+
+.shipmentDetails {
+  margin-top: auto;
+
+  font-size: 13px;
+  color: var(--brand-blue);
+
+  cursor: pointer;
+}

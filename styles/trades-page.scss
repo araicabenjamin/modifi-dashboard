@@ -86,12 +86,14 @@
   color: #3f4854;
 }
 .tradeMeta {
-  flex: 0 0 320px;
+  
+    display: flex;
+  flex-direction: column;
+  gap: 8px
+
 }
 
-
 .tradeDate {
-  margin-bottom: 4px;
   font-size: 14px;
   color: #9aa2ad;
 }
@@ -198,6 +200,12 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.filtersRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .filtersBar select {

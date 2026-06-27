@@ -7,6 +7,7 @@ import FilterBar from "../components/FilterBar";
 import { Trade, TradeStatus } from "../types/trade";
 
 import "../styles/trades-page.scss";
+import "../styles/trades-page-mobile.scss";
 
 
 export default function TradesPage() {

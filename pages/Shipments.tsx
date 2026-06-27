@@ -1,28 +1,32 @@
 import "../styles/shipments-page.scss";
-
+import "../styles/shipments-page-mobile.scss";
+import {
+  RotateCw ,
+  FileText,
+  CalendarDays,
+  CircleHelp,
+  ArrowRight,
+  ChevronUp,
+} from "lucide-react";
 
 export default function Shipments() {
   return (
     <div className="shipmentsPage">
-
       {/* HEADER */}
 
-      <div className="shipmentsHeader">
-        <h1>Shipment Tracker</h1>
-      </div>
+  <div className="shipmentsHeader">
+  <h1 className="page-heading">Shipment Tracker</h1>
+</div>
 
       {/* TOP CARD */}
 
       <div className="shipmentsTopCard">
-
         {/* LEFT */}
 
         <div className="uploadSection">
           <h3>Uploading Bill of Lading</h3>
 
-          <p>
-            Please upload the Document to track container.
-          </p>
+          <p>Please upload the Document to track container.</p>
 
           <div className="uploadRow">
             <button className="uploadBtn">UPLOAD</button>
@@ -42,37 +46,25 @@ export default function Shipments() {
         <div className="searchSection">
           <h3>Search for containers</h3>
 
-          <p>
-            Please enter the container ID and date of shipment to track
-          </p>
+          <p>Please enter the container ID and date of shipment to track</p>
 
           <div className="searchRow">
-
-            <input
-              type="text"
-              placeholder="4324354354456"
-            />
+            <input type="text" placeholder="4324354354456" />
 
             <div className="dateInput">
-              <input
-                type="text"
-                placeholder="05.02.2022"
-              />
+              <input type="text" placeholder="05.02.2022" />
 
               <span className="calendarIcon">🗓</span>
             </div>
 
-            <button className="submitBtn">
-              SUBMIT
-            </button>
+            <div className="searchActions">
+              <button className="submitBtn">SUBMIT</button>
 
-            <button className="resetBtn">
-              RESET
-            </button>
-
+              <button className="resetBtn">RESET</button>
+            </div>
+            
           </div>
         </div>
-
       </div>
 
       {/* RECENT */}
@@ -85,11 +77,9 @@ export default function Shipments() {
       {/* LIST */}
 
       <div className="shipmentList">
-
         {/* ITEM */}
 
         <div className="shipmentCard">
-
           <div className="progressLine progress50"></div>
 
           <div className="shipmentLocation">
@@ -98,13 +88,13 @@ export default function Shipments() {
 
             <div className="fileRow">
               <span>📄</span>
-              <span>NameoftheFile</span>
+              <span>BOL-482917</span>
             </div>
           </div>
 
           <div className="shipmentLocation">
             <h4>Cairo, Egypt</h4>
-            <p>22, February 2023</p>
+            <p>22 Feb 2023</p>
           </div>
 
           <div className="shipmentContainer">
@@ -112,36 +102,34 @@ export default function Shipments() {
             <p>#340586</p>
           </div>
 
-          <div className="shipmentStatus">
-            <span>⟳</span>
-            In Progress
-          </div>
+          <div className="shipmentActions">
+            <div className="shipmentStatus">
+              <RotateCw  size={14} />
+              In Progress
+            </div>
 
-          <div className="shipmentDetails">
-            Details →
+            <div className="shipmentDetails">Details →</div>
           </div>
-
         </div>
 
         {/* ITEM */}
 
         <div className="shipmentCard">
-
           <div className="progressLine progress30"></div>
 
           <div className="shipmentLocation">
             <h4>Las Vegas, USA</h4>
-            <p>Dateoftheshipmentdeparture</p>
+            <p>27 Jun 2026</p>
 
             <div className="fileRow">
               <span>📄</span>
-              <span>NameoftheFile</span>
+              <span>BOL-482917</span>
             </div>
           </div>
 
           <div className="shipmentLocation">
             <h4>Shanghai, China</h4>
-            <p>Dateoftheshipmentdeparture</p>
+            <p>05 Apr 2023</p>
           </div>
 
           <div className="shipmentContainer">
@@ -149,36 +137,34 @@ export default function Shipments() {
             <p>#340586</p>
           </div>
 
-          <div className="shipmentStatus">
-            <span>⟳</span>
-            In Progress
-          </div>
+          <div className="shipmentActions">
+            <div className="shipmentStatus">
+              <span>⟳</span>
+              In Progress
+            </div>
 
-          <div className="shipmentDetails">
-            Details →
+            <div className="shipmentDetails">Details →</div>
           </div>
-
         </div>
 
         {/* ITEM */}
 
         <div className="shipmentCard">
-
           <div className="progressLine progress20"></div>
 
           <div className="shipmentLocation">
             <h4>New York, USA</h4>
-            <p>Dateoftheshipmentdeparture</p>
+            <p>14 Jan 2023</p>
 
             <div className="fileRow">
               <span>📄</span>
-              <span>NameoftheFile</span>
+              <span>BOL-901246</span>
             </div>
           </div>
 
           <div className="shipmentLocation">
             <h4>Hong Kong, China</h4>
-            <p>Dateoftheshipmentdeparture</p>
+            <p>05 Apr 2023</p>
           </div>
 
           <div className="shipmentContainer">
@@ -186,36 +172,34 @@ export default function Shipments() {
             <p>#340586</p>
           </div>
 
-          <div className="shipmentStatus">
-            <span>⟳</span>
-            In Progress
-          </div>
+          <div className="shipmentActions">
+            <div className="shipmentStatus">
+              <span>⟳</span>
+              In Progress
+            </div>
 
-          <div className="shipmentDetails">
-            Details →
+            <div className="shipmentDetails">Details →</div>
           </div>
-
         </div>
 
         {/* ITEM */}
 
         <div className="shipmentCard">
-
           <div className="progressLine progress40"></div>
 
           <div className="shipmentLocation">
             <h4>New York, USA</h4>
-            <p>Dateoftheshipmentdeparture</p>
+            <p>14 Jan 2023</p>
 
             <div className="fileRow">
               <span>📄</span>
-              <span>NameoftheFile</span>
+              <span>BOL-123456</span>
             </div>
           </div>
 
           <div className="shipmentLocation">
             <h4>Shanghai, China</h4>
-            <p>Dateoftheshipmentdeparture</p>
+            <p>05 Apr 2023</p>
           </div>
 
           <div className="shipmentContainer">
@@ -223,36 +207,34 @@ export default function Shipments() {
             <p>#340586</p>
           </div>
 
-          <div className="shipmentStatus">
-            <span>⟳</span>
-            In Progress
-          </div>
+          <div className="shipmentActions">
+            <div className="shipmentStatus">
+              <span>⟳</span>
+              In Progress
+            </div>
 
-          <div className="shipmentDetails">
-            Details →
+            <div className="shipmentDetails">Details →</div>
           </div>
-
         </div>
 
         {/* ITEM */}
 
         <div className="shipmentCard">
-
           <div className="progressLine progress70"></div>
 
           <div className="shipmentLocation">
             <h4>Georgia, USA</h4>
-            <p>Dateoftheshipmentdeparture</p>
+            <p>12 Mar 2023</p>
 
             <div className="fileRow">
               <span>📄</span>
-              <span>NameoftheFile</span>
+              <span>BOL-482917</span>
             </div>
           </div>
 
           <div className="shipmentLocation">
             <h4>Beijing, China</h4>
-            <p>Dateoftheshipmentdeparture</p>
+            <p>05 Apr 2023</p>
           </div>
 
           <div className="shipmentContainer">
@@ -260,19 +242,16 @@ export default function Shipments() {
             <p>#340586</p>
           </div>
 
-          <div className="shipmentStatus">
-            <span>⟳</span>
-            In Progress
-          </div>
+          <div className="shipmentActions">
+            <div className="shipmentStatus">
+              <span>⟳</span>
+              In Progress
+            </div>
 
-          <div className="shipmentDetails">
-            Details →
+            <div className="shipmentDetails">Details →</div>
           </div>
-
         </div>
-
       </div>
-
     </div>
   );
 }
