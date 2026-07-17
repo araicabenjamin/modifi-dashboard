@@ -1,7 +1,7 @@
 import "../styles/shipments-page.scss";
 import "../styles/shipments-page-mobile.scss";
 import {
-  RotateCw ,
+  RotateCw,
   FileText,
   CalendarDays,
   CircleHelp,
@@ -12,17 +12,15 @@ import {
 export default function Shipments() {
   return (
     <div className="shipmentsPage">
-      {/* HEADER */}
 
-  <div className="shipmentsHeader">
-  <h1 className="page-heading">Shipment Tracker</h1>
-</div>
+      {/* HEADER */}
+      <div className="shipmentsHeader">
+        <h1 className="page-heading">Shipment Tracker</h1>
+      </div>
 
       {/* TOP CARD */}
-
       <div className="shipmentsTopCard">
         {/* LEFT */}
-
         <div className="uploadSection">
           <h3>Uploading Bill of Lading</h3>
 
@@ -36,13 +34,11 @@ export default function Shipments() {
         </div>
 
         {/* DIVIDER */}
-
         <div className="divider">
           <span>OR</span>
         </div>
 
         {/* RIGHT */}
-
         <div className="searchSection">
           <h3>Search for containers</h3>
 
@@ -62,23 +58,20 @@ export default function Shipments() {
 
               <button className="resetBtn">RESET</button>
             </div>
-            
           </div>
         </div>
       </div>
 
       {/* RECENT */}
-
       <div className="recentHeader">
         <span>Most recent</span>
         <span className="chevron">⌃</span>
       </div>
 
       {/* LIST */}
-
       <div className="shipmentList">
-        {/* ITEM */}
 
+        {/* ITEM */}
         <div className="shipmentCard">
           <div className="progressLine progress50"></div>
 
@@ -104,7 +97,7 @@ export default function Shipments() {
 
           <div className="shipmentActions">
             <div className="shipmentStatus">
-              <RotateCw  size={14} />
+              <RotateCw size={14} />
               In Progress
             </div>
 
@@ -113,7 +106,6 @@ export default function Shipments() {
         </div>
 
         {/* ITEM */}
-
         <div className="shipmentCard">
           <div className="progressLine progress30"></div>
 
@@ -148,7 +140,6 @@ export default function Shipments() {
         </div>
 
         {/* ITEM */}
-
         <div className="shipmentCard">
           <div className="progressLine progress20"></div>
 
@@ -183,7 +174,6 @@ export default function Shipments() {
         </div>
 
         {/* ITEM */}
-
         <div className="shipmentCard">
           <div className="progressLine progress40"></div>
 
@@ -218,7 +208,6 @@ export default function Shipments() {
         </div>
 
         {/* ITEM */}
-
         <div className="shipmentCard">
           <div className="progressLine progress70"></div>
 

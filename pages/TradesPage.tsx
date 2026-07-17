@@ -77,6 +77,7 @@ const filteredTrades: Trade[] = (repayments as Trade[]).filter((trade) => {
         <div className="tradesHeader">
           <input
             type="text"
+            className="tradeReferenceInput"
             placeholder="Trade Reference"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
