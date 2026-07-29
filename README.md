@@ -2,25 +2,30 @@
 
 A trade finance dashboard built for MODIFI to help businesses manage trades, track shipments, monitor repayments, and streamline customer onboarding.
 
+## Live Demo
+
+🔗 https://modifi-dashboard.vercel.app
+
+
 ## Overview
 
-![Overview](./assets/images/overview.png)
+<img src="https://github.com/user-attachments/assets/ddfddea7-6fe3-44af-a90f-365dfeb3ab54" alt="Overview_Original"  />
+
 
 ## Trades
 
-![Trades](./assets/images/trades.png)
+<img src="https://github.com/user-attachments/assets/f71a473e-d7b4-4e58-b0b9-f482a255b3ef" alt="Trades"  />
+
 
 ## Shipment Tracker
 
-![Shipment Tracker](./assets/images/shipment-tracker.png)
+<img src="https://github.com/user-attachments/assets/41942cdc-7f42-47f7-85cd-680f775ac288" alt="Shipment Tracker" />
 
-## Onboarding
-
-![Onboarding](./assets/images/onboarding.png)
 
 ## Sign Up
 
-![Sign Up](./assets/images/sign-up.png)
+<img src="https://github.com/user-attachments/assets/946ae72a-ff5b-4ae3-91c3-cbb4f8c6ead6" alt="Sign up" />
+
 
 ## Features
 
