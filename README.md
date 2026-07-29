@@ -14,7 +14,8 @@ This project is inspired by my previous work at MODIFI, a B2B fintech platform f
 
 ## Overview
 
-<img src="https://github.com/user-attachments/assets/ddfddea7-6fe3-44af-a90f-365dfeb3ab54" alt="Overview" />
+<img src="https://github.com/user-attachments/assets/2d906939-f4ac-4ca1-85f8-5688624272a6" alt="Overview"  />
+
 
 The dashboard provides businesses with a centralized workspace to monitor trade activity, review financial information, and manage operational workflows.
 
