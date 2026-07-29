@@ -9,7 +9,8 @@ A trade finance dashboard built for MODIFI to help businesses manage trades, tra
 
 ## Overview
 
-<img src="https://github.com/user-attachments/assets/ddfddea7-6fe3-44af-a90f-365dfeb3ab54" alt="Overview_Original"  />
+<img src="https://github.com/user-attachments/assets/e3d9c05d-df7a-4dfc-8292-67b7a07598d7" alt="Overview"  />
+
 
 
 ## Trades
